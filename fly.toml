@@ -5,9 +5,15 @@ primary_region = "ams"
   internal_port = 3128
   protocol = "tcp"
 
+  # Existing mapping: still expose Squid on port 443
   [[services.ports]]
-    port = 443       # expose externally on HTTPS port
-    handlers = []    # raw TCP, no Fly TLS proxying
+    port = 443
+    handlers = []
+
+  # New mapping: also expose Squid on port 8080
+  [[services.ports]]
+    port = 8080
+    handlers = []
 
 [[vm]]
   cpu_kind = "shared"
