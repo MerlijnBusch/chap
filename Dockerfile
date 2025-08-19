@@ -1,3 +1,6 @@
-from nginx:latest
+FROM sameersbn/squid:latest
 
-copy default.conf /etc/nginx/conf.d/default.conf
+# optional: add custom squid.conf if you want auth/logs/etc.
+# COPY squid.conf /etc/squid/squid.conf
+
+EXPOSE 3128
