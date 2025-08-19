@@ -1,4 +1,4 @@
-app = "chap-proxy"
+app = "chap"
 primary_region = "ams"
 
 [[services]]
